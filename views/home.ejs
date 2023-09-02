@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+        body{
+            font-family:  Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>All URLs in the database</h1>
+    <form action="/url" method="post">
+        <label>Enter your Original URL</label>
+        <input type="text" name="url" placeholder="https://example.com">
+        <button type="submit">Generate URL</button>
+        <% if (locals.id) { %>
+            <p>URL Generated: <a href="http://localhost:8001/url/<%= id %>">http://localhost:8001/url/<%= id %></a> </p>
+        <% } %>
+    </form>
+  </body>
+</html>
